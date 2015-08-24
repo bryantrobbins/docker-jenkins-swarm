@@ -45,4 +45,4 @@ USER jslave
 WORKDIR /home/jslave
 
 # Prepare command for launching swarm client
-CMD    ["start.sh"]
+CMD    ["./start.sh"]
