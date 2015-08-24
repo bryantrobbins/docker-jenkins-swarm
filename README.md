@@ -24,7 +24,9 @@ this on my own in early 2014.
 
 # How
 
-If you want to try this out, you should be able to:
+Caveat: You should check the Known Issues below.
+
+(Once those are fixed) if you want to try this out, you should be able to:
 * (duh) Install Docker on some host
 * Clone the repo
 * Build the jslave image in jslave/
