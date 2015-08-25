@@ -14,7 +14,7 @@ RUN apt-get install ant wget unzip bzip2 xvfb git -y
 
 # Needed for R
 RUN apt-get install r-base r-base-dev libxml2-dev libcurl3-dev -y
-COPY install.r /install.r
+ADD install.r /install.r
 RUN Rscript install.r
 
 # Install Gradle
