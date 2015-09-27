@@ -9,6 +9,6 @@ nslave=$4
 for i in `seq 1 $nslave`;
 do
   echo $i
-  docker run -d --dns 128.8.127.50 --volumes-from cuadata -P --name slave-$i -e SWARM_MASTER=$master_host -e SWARM_USER=$master_user -e SWARM_PASSWORD=$master_pass bryantrobbins/jslave
-  sleep 15
+  docker run -d --dns 128.8.127.50 -P --name slave-$i -e SWARM_MASTER=$master_host -e SWARM_USER=$master_user -e SWARM_PASSWORD=$master_pass bryantrobbins/jslave
+  sleep 10
 done
