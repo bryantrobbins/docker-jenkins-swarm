@@ -7,3 +7,4 @@ image=$1
 docker ps -a | awk '{print $1,$2}' | grep ${image} | awk '{print $1}' | xargs docker stop
 docker ps -a | awk '{print $1,$2}' | grep ${image} | awk '{print $1}' | xargs docker rm
 
+exit 0
