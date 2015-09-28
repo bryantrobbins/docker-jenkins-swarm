@@ -26,11 +26,6 @@ ENV PATH $PATH:/gradle/bin
 # Create slave user
 RUN groupadd -r jslave && useradd -r -g jslave jslave
 
-# Stage sources
-ADD sources.tar /
-RUN mkdir -p /home/jslave/.gradle
-RUN mv /sources/artifacts/* /home/jslave/.gradle
-
 # Install swarm agent and start script wrapper
 ADD http://maven.jenkins-ci.org/content/repositories/releases/org/jenkins-ci/plugins/swarm-client/2.0/swarm-client-2.0-jar-with-dependencies.jar /home/jslave/swarm.jar
 ADD start.sh /home/jslave/start.sh

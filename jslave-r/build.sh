@@ -4,3 +4,5 @@ if [ $? -eq 0 ]
 	then
 		docker save -o jslave.tar bryantrobbins/jslave
 fi
+
+exit $?
