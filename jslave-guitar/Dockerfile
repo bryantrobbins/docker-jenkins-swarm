@@ -2,7 +2,8 @@ FROM ubuntu:14.04
 MAINTAINER Bryan Robbins <bryantrobbins@gmail.com>
 
 # Get latest packages
-RUN apt-get update && apt-get clean
+RUN apt-get clean
+RUN apt-get update
 
 # Needed for Jenkins
 RUN apt-get install --no-install-recommends openjdk-7-jdk -y
