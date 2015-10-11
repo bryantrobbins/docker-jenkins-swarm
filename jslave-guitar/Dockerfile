@@ -9,7 +9,7 @@ RUN apt-get update
 RUN apt-get install --no-install-recommends openjdk-7-jdk -y
 
 # Needed for Jenkins jobs
-RUN apt-get install ant wget unzip bzip2 xvfb git -y
+RUN apt-get install ant wget unzip bzip2 xvfb curl git -y
 
 # Install Gradle
 ADD https://services.gradle.org/distributions/gradle-2.6-bin.zip /
