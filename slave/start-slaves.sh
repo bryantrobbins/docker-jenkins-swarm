@@ -7,7 +7,7 @@ image=$4
 nslave=$5
 
 # Clip the last letter of the image to serve as a prefix (avoids collisions in container names)
-prefix="${image: -1}"
+prefix=`echo $image | awk -F '/' '{print $2}' | awk -F '-' '{print $2}'`
 
 # Start some slaves
 for i in `seq 1 $nslave`;
