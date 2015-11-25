@@ -2,7 +2,7 @@ FROM ubuntu:14.04
 MAINTAINER Bryan Robbins <bryantrobbins@gmail.com>
 
 # Get latest packages
-RUN echo "http://cran.rstudio.com/bin/linux/ubuntu trusty/" >> /etc/apt/sources.list
+RUN echo "deb http://cran.rstudio.com/bin/linux/ubuntu trusty/" >> /etc/apt/sources.list
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9
 RUN apt-get update && apt-get clean
 
